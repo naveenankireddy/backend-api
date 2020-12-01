@@ -28,6 +28,12 @@ const userController = {
     });
   },
 
+  //get all the users
+  getUsers: async (req, res) => {
+    User.find({}).then((users) => {
+      res.json({ users });
+    });
+  },
   //update the existing user
   updateUser: async (req, res) => {
     await User.findByIdAndUpdate({ _id: req.params.id }, req.body).then(() => {
@@ -45,6 +51,7 @@ const userController = {
       });
     });
   },
+
   //delete the user
   deleteUser: async (req, res) => {
     await User.deleteOne({ _id: req.params.id })
@@ -58,6 +65,38 @@ const userController = {
           error: error,
         });
       });
+  },
+  //   get users by coordinates
+  getUserByCoordinates: async (req, res) => {
+    await User.aggregate([
+      {
+        $geoNear: {
+          near: {
+            type: "Point",
+            coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)],
+          },
+          maxDistance: 10000000,
+          distanceField: "distance",
+          spherical: true,
+        },
+      },
+    ])
+      .then((users) => {
+        res.status(200).send(users);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
+  //get users by timestamps
+  getUsersByTimeStamps: async (req, res) => {
+    await User.find({}, null, { sort: { date: -1 } }, function (err, users) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json({ users });
+      }
+    });
   },
 };
 
