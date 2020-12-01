@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/api/users", usersRouter);
 
 app.listen(port, () => {
   console.log("Server is started at", port, "CC dug dug dug dug dug.......");
