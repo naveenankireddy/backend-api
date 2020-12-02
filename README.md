@@ -1,12 +1,36 @@
 # backend-api
 
-Step 1:Clone the repo
-step 2:Run command npm i
-step 3:Run command npm start
+##Run Commands
+*Step 1:clone the repo 
+*step 2:Run command npm i
+*Step 3:Run command npm start
 
-Routes:                                                              Methods:
-CreateUser = /api/users/create,                                       "POST"
-updateUser = /api/users/update/:id                                    "PUT"
-deleteUser = /api/users/delete/:id                                  "DELETE"
+##Basic Informations:
 
-Coordinates = /api/users/coordinates?lng=<value>&lat=<value>          "POST"
+BASE URL: localhost:5000/api/users/
+
+/create
+Create User,
+method:POST
+
+/update/:id
+Update User,
+method:PUT
+
+
+/delete/:id
+Delete User,
+method:DELETE
+
+
+/
+Get all Users,
+method:"GET"
+
+/coordinates/?lng=<value>&lat=<value>
+ Get users between that range,
+  method:"GET"
+
+
+
+
