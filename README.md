@@ -5,7 +5,7 @@
 *Step 2:Run command npm i
 *Step 3:Run command npm start
 
-##Basic Informations:
+##Basic Information:
 
 BASE URL: localhost:5000/api/users/
 
