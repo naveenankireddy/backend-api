@@ -4,9 +4,9 @@ Step 1:Clone the repo
 step 2:Run command npm i
 step 3:Run command npm start
 
-routes:
-CreateUser = /api/users/create,       method:"POST"
-updateUser = /api/users/update/:id    method:"PUT"
-deleteUser = /api/users/delete/:id    method:"DELETE"
+Routes:                                                              Methods:
+CreateUser = /api/users/create,                                       "POST"
+updateUser = /api/users/update/:id                                    "PUT"
+deleteUser = /api/users/delete/:id                                  "DELETE"
 
-sortByCoordinates = /api/users/coordinates?lng=<value>&lat=<value>
+Coordinates = /api/users/coordinates?lng=<value>&lat=<value>         "POST"
