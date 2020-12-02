@@ -9,4 +9,4 @@ CreateUser = /api/users/create,                                       "POST"
 updateUser = /api/users/update/:id                                    "PUT"
 deleteUser = /api/users/delete/:id                                  "DELETE"
 
-Coordinates = /api/users/coordinates?lng=<value>&lat=<value>         "POST"
+Coordinates = /api/users/coordinates?lng=<value>&lat=<value>          "POST"
