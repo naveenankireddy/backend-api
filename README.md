@@ -1,9 +1,9 @@
 # backend-api
 
 ##Run Commands
-##Step 1:clone the repo.
-##Step 2:Run command npm i.
-##Step 3:Run command npm start.
+*Step 1:clone the repo
+*Step 2:Run command npm i
+*Step 3:Run command npm start
 
 ##Basic Informations:
 
